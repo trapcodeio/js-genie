@@ -13,7 +13,7 @@ This file contains functions that has to deal with `limiting` strings.
 Limit string to defined length
 
 ```ts
-import {strLimit} from "@trapcode/js-toolbox/string/limit";
+import {strLimit} from "js-genie/string/limit";
 
 strLimit("Do have a lovely day", 14, "...")
 
@@ -25,7 +25,7 @@ strLimit("Do have a lovely day", 14, "...")
 Limit string by words.
 
 ```ts
-import {strLimitWords} from "@trapcode/js-toolbox/string/limit";
+import {strLimitWords} from "js-genie/string/limit";
 
 strLimitWords("Do have a lovely day.", 4, "...")
 
@@ -37,7 +37,7 @@ strLimitWords("Do have a lovely day.", 4, "...")
 Limit string to defined length without cutting words short.
 
 ```ts
-import {strLimitWordsByLength} from "@trapcode/js-toolbox/string/limit";
+import {strLimitWordsByLength} from "js-genie/string/limit";
 
 strLimit("Do have a lovely day", 14, "...")
 // "Do have a love..." 

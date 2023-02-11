@@ -9,7 +9,7 @@ This file contains functions that has to deal with `manipulating` Arrays.
 
 ### chunkArray
 ```ts
-import {chunkArray} from "@trapcode/js-toolbox/array/manipulate";
+import {chunkArray} from "js-genie/array/manipulate";
 
 chunkArray(["a", "b",  "c", "d", "e", "f", "g", "h"], 3) 
 

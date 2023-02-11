@@ -8,7 +8,7 @@ This file contains functions that has to deal with `hashing`
 
 ### md5
 ```ts
-import {md5} from "@trapcode/js-toolbox/crypto/hash";
+import {md5} from "js-genie/crypto/hash";
 
 md5("your string") // 0addffefe394b8a9e525266e5f0c95f9
 ```
