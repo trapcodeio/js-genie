@@ -21,7 +21,7 @@ export function compute<R = any, V = R>(val: V, fn: (val: V) => R): R {
 }
 
 /**
- * Compute - a simple way of calling an inline function.
+ * Call - a simple way of calling an inline function.
  * @param fn - The function to call
  *
  * @example
@@ -32,6 +32,7 @@ export function compute<R = any, V = R>(val: V, fn: (val: V) => R): R {
  * }); // returns "+1234567890"
  *
  */
-export function computeFunc<R = any>(fn: () => R): R {
+export function call<R = any>(fn: () => R): R {
     return fn();
 }
+

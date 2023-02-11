@@ -7,10 +7,11 @@
  * same as T | undefined
  *
  * @example
- * let a: Maybe<string>; // a can be string or undefined
- * let b: Maybe<number> = 1; // b can be string or undefined
+ * let a: Maybe<string>; // can be string or undefined
+ * let b: Maybe<number> = 1; // can be number or undefined
  */
 export type Maybe<T> = T | undefined;
+
 
 
 /**
