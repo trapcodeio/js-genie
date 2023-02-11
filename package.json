@@ -9,7 +9,9 @@
   "license": "MIT",
   "scripts": {
     "watch": "npx tsc --watch",
-    "play": "npx ts-node-dev --respawn ./tests/play.ts"
+    "play": "npx ts-node-dev --respawn ./tests/play.ts",
+    "build": "npx tsc",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",
