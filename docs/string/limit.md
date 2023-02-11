@@ -4,7 +4,9 @@ This file contains functions that has to deal with `limiting` strings.
 
 ## Functions
 
-- [strLimit](#strlimit) - Split an array into chunks of defined size.
+- [strLimit](#strlimit) - Limit string to defined length
+- [strLimitWords](#strlimitwords) - Limit string by words.
+- [strLimitWordsByLength](#strlimitwordsbylength) - Limit string to defined length without cutting words short.
 
 ### strLimit
 
@@ -30,7 +32,7 @@ strLimitWords("Do have a lovely day.", 4, "...")
 // "Do have a lovely..."
 ```
 
-### strLimitWords
+### strLimitWordsByLength
 
 Limit string to defined length without cutting words short.
 
