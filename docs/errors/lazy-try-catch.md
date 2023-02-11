@@ -12,7 +12,7 @@ This file contains functions that has to deal with boycotting forceful `try` and
 Try and catch functions.
 
 ```ts
-import {tryCatch as t} from "@trapcodeio/js-toolbox/errors/lazy-try-catch";
+import {tryCatch as t} from "js-genie/errors/lazy-try-catch";
 
 let [value, err] = t(() => {
     // Do something
@@ -27,7 +27,7 @@ console.log(err) // Error Stack
 Try and catch promises.
 
 ```ts
-import {resolve as r} from "@trapcodeio/js-toolbox/errors/lazy-try-catch";
+import {resolve as r} from "js-genie/errors/lazy-try-catch";
 
 let [value, err] = await r(User.find({name: 'john'}));
 
