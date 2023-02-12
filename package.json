@@ -14,33 +14,6 @@
     "prepublishOnly": "npm run build && npm run bundle",
     "generate:exports": "node --loader=ts-node/esm ./scripts/generate-exports.ts"
   },
-  "exports": {
-    "./array/*": {
-      "import": "./dist/array/*.js",
-      "require": "./dist/array/*.cjs",
-      "types": "./dist/array/*.d.ts"
-    },
-    "./crypto/*": {
-      "import": "./dist/crypto/*.js",
-      "require": "./dist/crypto/*.cjs",
-      "types": "./dist/crypto/*.d.ts"
-    },
-    "./errors/*": {
-      "import": "./dist/errors/*.js",
-      "require": "./dist/errors/*.cjs",
-      "types": "./dist/errors/*.d.ts"
-    },
-    "./string/*": {
-      "import": "./dist/string/*.js",
-      "require": "./dist/string/*.cjs",
-      "types": "./dist/string/*.d.ts"
-    },
-    "./utils/*": {
-      "import": "./dist/utils/*.js",
-      "require": "./dist/utils/*.cjs",
-      "types": "./dist/utils/*.d.ts"
-    }
-  },
   "devDependencies": {
     "@types/node": "^18.13.0",
     "nodemon": "^2.0.20",
@@ -50,5 +23,37 @@
     "tsup": "^6.6.0",
     "typescript": "^4.9.5"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "exports": {
+    "./array/manipulate": {
+      "import": "./dist/array/manipulate.js",
+      "require": "./dist/array/manipulate.cjs",
+      "types": "./dist/array/manipulate.d.ts"
+    },
+    "./crypto/hash": {
+      "import": "./dist/crypto/hash.js",
+      "require": "./dist/crypto/hash.cjs",
+      "types": "./dist/crypto/hash.d.ts"
+    },
+    "./errors/lazy-try-catch": {
+      "import": "./dist/errors/lazy-try-catch.js",
+      "require": "./dist/errors/lazy-try-catch.cjs",
+      "types": "./dist/errors/lazy-try-catch.d.ts"
+    },
+    "./string/limit": {
+      "import": "./dist/string/limit.js",
+      "require": "./dist/string/limit.cjs",
+      "types": "./dist/string/limit.d.ts"
+    },
+    "./utils/functions": {
+      "import": "./dist/utils/functions.js",
+      "require": "./dist/utils/functions.cjs",
+      "types": "./dist/utils/functions.d.ts"
+    },
+    "./utils/typescript": {
+      "import": "./dist/utils/typescript.js",
+      "require": "./dist/utils/typescript.cjs",
+      "types": "./dist/utils/typescript.d.ts"
+    }
+  }
 }

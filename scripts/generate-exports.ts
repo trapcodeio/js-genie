@@ -2,22 +2,21 @@
  * This file will generate the exports for the projects package.json
  */
 
-import path from "node:path";
+// import path from "node:path";
 import fs from "node:fs";
 import fileMap from "./file-map.js";
 
 const exportsList: Record<string, { import: string; require: string; types: string }> = {};
 
-for (const file of fileMap) {
-    let dir = path.dirname(file);
+for (let file of fileMap) {
+    // remove .ts from file
+    file = file.replace(".ts", "");
+    let distFile = "./dist/" + file.slice(2);
 
-    // remove "./" from the start of the string
-    if (dir.startsWith("./")) dir = dir.slice(2);
-
-    exportsList[`./${dir}/*`] = {
-        import: `./dist/${dir}/*.js`,
-        require: `./dist/${dir}/*.cjs`,
-        types: `./dist/${dir}/*.d.ts`
+    exportsList[file] = {
+        import: distFile + ".js",
+        require: distFile + ".cjs",
+        types: distFile + ".d.ts"
     };
 }
 
