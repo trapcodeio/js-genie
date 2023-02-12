@@ -1,6 +1,6 @@
 {
   "name": "js-genie",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Well Documented  Functions we find ourselves reinventing every-time.",
   "type": "module",
   "exports": {
