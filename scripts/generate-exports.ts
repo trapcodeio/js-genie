@@ -5,6 +5,7 @@
 // import path from "node:path";
 import fs from "node:fs";
 import fileMap from "./file-map.js";
+import os from "node:os";
 
 const exportsList: Record<string, { import: string; require: string; types: string }> = {};
 
@@ -27,7 +28,7 @@ const packageJson = JSON.parse(fs.readFileSync("./package.json", "utf-8"));
 packageJson.exports = exportsList;
 
 // write the package.json file
-fs.writeFileSync("./package.json", JSON.stringify(packageJson, null, 2));
+fs.writeFileSync("./package.json", JSON.stringify(packageJson, null, 2) + os.EOL);
 
 // log the exports
 console.log(exportsList);
