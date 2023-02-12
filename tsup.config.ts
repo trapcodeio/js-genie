@@ -2,15 +2,22 @@ import { defineConfig } from "tsup";
 
 export default defineConfig((_options) => {
     return {
-        entry: [],
+        entry: [
+            "./array/manipulate.ts",
+            "./crypto/hash.ts",
+            "./errors/lazy-try-catch.ts",
+            "./string/limit.ts",
+            "./utils/functions.ts",
+            "./utils/typescript.ts"
+        ],
         format: ["cjs"],
         // minify: !options.watch,
-        outExtension: () => ({ js: `.js` }),
+        outExtension: () => ({ js: `.cjs` }),
         dts: false,
         splitting: true,
         bundle: false,
-        treeshake: false,
-        clean: true,
-        onSuccess: "cp ./dist.package.json ./dist/package.json"
+        treeshake: true
+        // clean: true
+        // onSuccess: "cp ./dist.package.json ./dist/package.json"
     };
 });

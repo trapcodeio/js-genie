@@ -2,8 +2,14 @@
   "name": "js-genie",
   "version": "0.0.3",
   "description": "Well Documented  Functions we find ourselves reinventing every-time.",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "type": "module",
+  "exports": {
+    "./*": {
+      "import": "./dist/*",
+      "require": "./dist/*.cjs",
+      "types": "./dist/*.d.ts"
+    }
+  },
   "repository": "https://github.com/trapcodeio/js-genie.git",
   "author": "trapcodeio <trapcode.io@gmail.com>",
   "license": "MIT",
@@ -11,6 +17,7 @@
     "watch": "npx tsc --watch",
     "play": "npx ts-node-dev --respawn ./tests/play.ts",
     "build": "npx tsc",
+    "bundle": "npx tsup",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {

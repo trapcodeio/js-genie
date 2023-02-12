@@ -4,7 +4,7 @@
     "module": "NodeNext",
     "declaration": true,
     "isolatedModules": true,
-    "outDir": "./build",
+    "outDir": "./dist",
     "strict": true,
     "moduleResolution": "node16",
     "allowSyntheticDefaultImports": true,
@@ -14,11 +14,13 @@
     "resolveJsonModule": true,
     "types": [
       "@types/node",
-    ]
+    ],
   },
   "exclude": [
     "./node_modules",
-//    "./build",
+    "./dist",
+    "tsup.config.ts",
+    "tests"
 //    "package.json"
   ]
 }
