@@ -16,9 +16,9 @@
   "scripts": {
     "watch": "npx tsc --watch",
     "play": "npx ts-node-dev --respawn ./tests/play.ts",
-    "build": "npx tsc",
+    "build": "rm -rf ./dist && npx tsc",
     "bundle": "npx tsup",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build && npm run bundle"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",
