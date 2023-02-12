@@ -1,15 +1,9 @@
 import { defineConfig } from "tsup";
+import fileMap from "./scripts/file-map.js";
 
 export default defineConfig((_options) => {
     return {
-        entry: [
-            "./array/manipulate.ts",
-            "./crypto/hash.ts",
-            "./errors/lazy-try-catch.ts",
-            "./string/limit.ts",
-            "./utils/functions.ts",
-            "./utils/typescript.ts"
-        ],
+        entry: fileMap,
         format: ["cjs"],
         // minify: !options.watch,
         outExtension: () => ({ js: `.cjs` }),

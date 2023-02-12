@@ -4,10 +4,30 @@
   "description": "Well Documented  Functions we find ourselves reinventing every-time.",
   "type": "module",
   "exports": {
-    "./*": {
-      "import": "./dist/*",
-      "require": "./dist/*.cjs",
-      "types": "./dist/*.d.ts"
+    "./array/*": {
+      "import": "./dist/array/*.js",
+      "require": "./dist/array/*.cjs",
+      "types": "./dist/array/*.d.ts"
+    },
+    "./crypto/*": {
+      "import": "./dist/crypto/*.js",
+      "require": "./dist/crypto/*.cjs",
+      "types": "./dist/crypto/*.d.ts"
+    },
+    "./errors/*": {
+      "import": "./dist/errors/*.js",
+      "require": "./dist/errors/*.cjs",
+      "types": "./dist/errors/*.d.ts"
+    },
+    "./string/*": {
+      "import": "./dist/string/*.js",
+      "require": "./dist/string/*.cjs",
+      "types": "./dist/string/*.d.ts"
+    },
+    "./utils/*": {
+      "import": "./dist/utils/*.js",
+      "require": "./dist/utils/*.cjs",
+      "types": "./dist/utils/*.d.ts"
     }
   },
   "repository": "https://github.com/trapcodeio/js-genie.git",
@@ -22,10 +42,12 @@
   },
   "devDependencies": {
     "@types/node": "^18.13.0",
-    "ts-node-dev": "^1.1.8",
-    "typescript": "^4.9.5",
+    "nodemon": "^2.0.20",
     "prettier": "^2.8.4",
-    "tsup": "^6.6.0"
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^1.1.8",
+    "tsup": "^6.6.0",
+    "typescript": "^4.9.5"
   },
   "dependencies": {}
 }

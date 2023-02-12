@@ -20,7 +20,8 @@
     "./node_modules",
     "./dist",
     "tsup.config.ts",
-    "tests"
+    "tests",
+    "scripts",
 //    "package.json"
   ]
 }
