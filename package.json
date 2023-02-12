@@ -3,6 +3,17 @@
   "version": "1.0.0",
   "description": "Well Documented  Functions we find ourselves reinventing every-time.",
   "type": "module",
+  "repository": "https://github.com/trapcodeio/js-genie.git",
+  "author": "trapcodeio <trapcode.io@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "watch": "npx tsc --watch",
+    "play": "npx ts-node-dev --respawn ./tests/play.ts",
+    "build": "rm -rf ./dist && npx tsc",
+    "bundle": "npx tsup",
+    "prepublishOnly": "npm run build && npm run bundle",
+    "generate:exports": "node --loader=ts-node/esm ./scripts/generate-exports.ts"
+  },
   "exports": {
     "./array/*": {
       "import": "./dist/array/*.js",
@@ -29,16 +40,6 @@
       "require": "./dist/utils/*.cjs",
       "types": "./dist/utils/*.d.ts"
     }
-  },
-  "repository": "https://github.com/trapcodeio/js-genie.git",
-  "author": "trapcodeio <trapcode.io@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "watch": "npx tsc --watch",
-    "play": "npx ts-node-dev --respawn ./tests/play.ts",
-    "build": "rm -rf ./dist && npx tsc",
-    "bundle": "npx tsup",
-    "prepublishOnly": "npm run build && npm run bundle"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",
