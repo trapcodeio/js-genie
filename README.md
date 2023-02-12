@@ -1,6 +1,6 @@
 # Js Genie 🧞‍♂️
 
-🧞‍♂️ Genie says It's either you need me or you don't. Take a look at the list of functions below and if you find
+**🧞‍♂️ says:** It's either you need me or you don't. Take a look at the list of functions below and if you find
 something useful, **Then you need me.**
 
 All shipped in modules for tree shaking support and strictly typed.
