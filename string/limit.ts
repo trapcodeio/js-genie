@@ -17,11 +17,9 @@ export function strLimit(str: string, length: number, prependIfLong?: string): s
     // If string is less than limit, return
     if (str.length < length) return str;
 
-
     // Shorten string and prepend expected text
     return str.substr(0, length).trim() + (prependIfLong ? prependIfLong : "");
 }
-
 
 /**
  * Limit string to defined length without cutting words short.
@@ -40,7 +38,7 @@ export function strLimitWordsByLength(str: string, length: number, prependIfLong
     if (str.indexOf(" ") < 0) return strLimit(str, length, prependIfLong);
 
     // Limit str without prependIfLong
-    let limitedStr: string | string[] = strLimit(str, length)
+    let limitedStr: string | string[] = strLimit(str, length);
 
     // if `strLimit` returns same string, it means the length of the
     // string is not upto the required length.
@@ -54,9 +52,7 @@ export function strLimitWordsByLength(str: string, length: number, prependIfLong
 
     // Join array
     return limitedStr.join(" ").trim() + (prependIfLong ? prependIfLong : "");
-
 }
-
 
 /**
  * Limit string by words.
@@ -73,10 +69,10 @@ export function strLimitWords(str: string, words: number, prependIfLong?: string
     // Split words using space
     let _words = str.split(" ");
 
-    // Return string if it has less words than required.
+    // Return string if it has fewer words than required.
     if (_words.length < words) return str;
 
-    // Splice to get amount of words specified.
+    // Splice to get the number of words specified.
     _words = _words.splice(0, words);
 
     // Join array..
