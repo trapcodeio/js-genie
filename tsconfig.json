@@ -6,7 +6,7 @@
     "isolatedModules": true,
     "outDir": "./dist",
     "strict": true,
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "node16",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
