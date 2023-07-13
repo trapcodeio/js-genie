@@ -1,6 +1,6 @@
 {
   "name": "js-genie",
-  "version": "1.0.6",
+  "version": "1.0.5",
   "description": "Well Documented  Functions we find ourselves reinventing every-time.",
   "type": "module",
   "repository": "https://github.com/trapcodeio/js-genie.git",
@@ -24,6 +24,13 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {},
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*"
+      ]
+    }
+  },
   "exports": {
     "./array/manipulate": {
       "import": "./dist/array/manipulate.js",

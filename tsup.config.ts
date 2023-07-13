@@ -8,6 +8,7 @@ export default defineConfig((_options) => {
         // minify: !options.watch,
         outExtension: () => ({ js: `.cjs` }),
         dts: false,
+
         splitting: true,
         bundle: false,
         treeshake: true
