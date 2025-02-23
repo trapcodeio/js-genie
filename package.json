@@ -8,20 +8,20 @@
   "license": "MIT",
   "scripts": {
     "watch": "npx tsc --watch",
-    "play": "npx ts-node-dev --respawn ./tests/play.ts",
+    "play": "npx tsx watch tests/play.ts",
     "build": "rm -rf ./dist && npx tsc ",
     "bundle": "npx tsup",
     "prepublishOnly": "npm run build && npm run bundle",
     "generate:exports": "node --loader=ts-node/esm ./scripts/generate-exports.ts"
   },
   "devDependencies": {
-    "@types/node": "20.4.2",
-    "nodemon": "^3.0.1",
-    "prettier": "^3.0.0",
-    "ts-node": "^10.9.1",
-    "ts-node-dev": "^2.0.0",
-    "tsup": "^7.1.0",
-    "typescript": "^5.1.6"
+    "@types/node": "22.13.5",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.2",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.3.6",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
   },
   "dependencies": {},
   "typesVersions": {
