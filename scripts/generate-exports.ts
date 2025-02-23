@@ -14,9 +14,9 @@ for (let file of fileMap) {
     let distFile = "./dist/" + file.slice(2);
 
     exportsList[file] = {
+        types: distFile + ".d.ts",
         import: distFile + ".js",
-        require: distFile + ".cjs",
-        types: distFile + ".d.ts"
+        require: distFile + ".cjs"
     };
 }
 

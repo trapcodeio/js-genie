@@ -9,7 +9,7 @@
   "scripts": {
     "watch": "npx tsc --watch",
     "play": "npx tsx watch tests/play.ts",
-    "build": "rm -rf ./dist && npx tsc ",
+    "build": "rm -rf ./dist && npx tsc",
     "bundle": "npx tsup",
     "prepublishOnly": "npm run build && npm run bundle",
     "generate:exports": "node --loader=ts-node/esm ./scripts/generate-exports.ts"
@@ -33,34 +33,34 @@
   },
   "exports": {
     "./array/manipulate": {
+      "types": "./dist/array/manipulate.d.ts",
       "import": "./dist/array/manipulate.js",
-      "require": "./dist/array/manipulate.cjs",
-      "types": "./dist/array/manipulate.d.ts"
+      "require": "./dist/array/manipulate.cjs"
     },
     "./crypto/hash": {
+      "types": "./dist/crypto/hash.d.ts",
       "import": "./dist/crypto/hash.js",
-      "require": "./dist/crypto/hash.cjs",
-      "types": "./dist/crypto/hash.d.ts"
+      "require": "./dist/crypto/hash.cjs"
     },
     "./errors/lazy-try-catch": {
+      "types": "./dist/errors/lazy-try-catch.d.ts",
       "import": "./dist/errors/lazy-try-catch.js",
-      "require": "./dist/errors/lazy-try-catch.cjs",
-      "types": "./dist/errors/lazy-try-catch.d.ts"
+      "require": "./dist/errors/lazy-try-catch.cjs"
     },
     "./string/limit": {
+      "types": "./dist/string/limit.d.ts",
       "import": "./dist/string/limit.js",
-      "require": "./dist/string/limit.cjs",
-      "types": "./dist/string/limit.d.ts"
+      "require": "./dist/string/limit.cjs"
     },
     "./utils/functions": {
+      "types": "./dist/utils/functions.d.ts",
       "import": "./dist/utils/functions.js",
-      "require": "./dist/utils/functions.cjs",
-      "types": "./dist/utils/functions.d.ts"
+      "require": "./dist/utils/functions.cjs"
     },
     "./utils/typescript": {
+      "types": "./dist/utils/typescript.d.ts",
       "import": "./dist/utils/typescript.js",
-      "require": "./dist/utils/typescript.cjs",
-      "types": "./dist/utils/typescript.d.ts"
+      "require": "./dist/utils/typescript.cjs"
     }
   }
 }
