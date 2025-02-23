@@ -1,6 +1,6 @@
 # string/limit
 
-This file contains functions that has to deal with `limiting` strings.
+This file contains functions that have to deal with `limiting` strings.
 
 ## Functions
 

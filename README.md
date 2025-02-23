@@ -11,6 +11,8 @@ All shipped in modules for tree shaking support and strictly typed.
 - [crypto/hash](./docs/crypto/hash.md)
 - [errors/lazy-try-catch](./docs/errors/lazy-try-catch.md)
 - [string/limit](./docs/string/limit.md)
+- [string/stats](./docs/string/stats.md)
+- [number/human](./docs/number/human.md)
 - [utils/functions](./docs/utils/functions.md)
 - [utils/typescript](./docs/utils/typescript.md)
 
@@ -19,7 +21,18 @@ All shipped in modules for tree shaking support and strictly typed.
 
 ```bash
 npm install js-genie
-# or
+```
+
+```bash
 yarn add js-genie
 ```
+
+```bash
+pnpm add js-genie
+```
+
+```bash
+bun install js-genie
+```
+
 

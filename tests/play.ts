@@ -1,4 +1,5 @@
 import { strLimit, strLimitWords, strLimitWordsByLength } from "../string/limit.js";
+import { strSize } from "../string/stats.js";
 
 const xpressMongo =
     "A light mongodb model/helper library for nodejs, provides modeling for your documents while keeping you very close to mongodb native syntax";

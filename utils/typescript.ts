@@ -12,7 +12,17 @@
  */
 export type Maybe<T> = T | undefined;
 
-
+/**
+ * Maybe<T> function that returns a Maybe<T> with an initial value of undefined.
+ * @param value
+ * @example
+ * let a: Maybe<string> = undefined;
+ * // can be written as
+ * let a = Maybe<string>();
+ */
+export function Maybe<T = any>(value: Maybe<T> = undefined): Maybe<T> {
+    return value;
+}
 
 /**
  * MaybeNull<T> is a type that can be either T or null.

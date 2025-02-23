@@ -17,6 +17,7 @@ This file contains functions that has to deal with `Typescript` types and hacks.
 
 ### Maybe
 `Maybe<T>` is a **Type** that can be either `T` or `undefined`. same as `T | undefined`.
+It also has a function with same name that can be used to initialize a variable with `Maybe<T>` type.
 
 ```ts
 import {Maybe} from "js-genie/utils/typescript";
@@ -33,8 +34,20 @@ b = undefined; // ✅ ok
 b = "hello"; // ❌ error
 ```
 
+Using the function to initialize a variable with `Maybe<T>` type.
+```ts
+let c = Maybe<string>(); // `undefined`
+// is the same as
+let d: string | undefined;
+
+// with initial value
+let e = Maybe(1); // `1`
+// is the same as
+let f: number | undefined = 1;
+```
+
 ### MaybeNull
-`MaybeNull<T>` is a **Type** that can be either `T` or `null`. same as `T | null`.
+`MaybeNull<T>` is a **Type** that can be either `T` or `null`. Same as `T | null`.
 It also has a function with same name that can be used to initialize a variable with `MaybeNull<T>` type.
 
 ```ts
@@ -50,15 +63,22 @@ a = 1; // ❌ error
 b = 1; // ✅ ok
 b = null; // ✅ ok
 b = "hello"; // ❌ error
+```
+Using function to initialize a variable with `MaybeNull<T>` type
 
-// Using function to initialize a variable with MaybeNull<T> type
-let c = MaybeNull<string>(); // `null` as (string | null)
-let d = MaybeNull(1); // `1` as (number | null)
+```ts
+let a = MaybeNull<string>(); // `null`
+// is the same as
+let b: string | null = null
+
+let c = MaybeNull('hello'); // `hello`
+// is the same as
+let d: string | null = 'hello';
 ```
 
 
 ### MaybeFalse
-`MaybeFalse<T>` is a **Type** that can be either `T` or `false`. same as `T | false`.
+`MaybeFalse<T>` is a **Type** that can be either `T` or `false`. Same as `T | false`.
 It also has a function with same name that can be used to initialize a variable with `MaybeFalse<T>` type.
 
 ```ts
@@ -74,9 +94,10 @@ a = 1; // ❌ error
 b = 1; // ✅ ok
 b = false; // ✅ ok
 b = "hello"; // ❌ error
+```
 
-// Using function to initialize a variable with MaybeFalse<T> type
-
+Using function to initialize a variable with `MaybeFalse<T>` type
+```ts
 let c = MaybeFalse<string>(); // `false` as (string | false)
 let d = MaybeFalse(1); // `1` as (number | false)
 ```
