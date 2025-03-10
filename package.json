@@ -11,7 +11,7 @@
     "play": "npx tsx watch tests/play.ts",
     "build": "rm -rf ./dist && npx tsc",
     "bundle": "npx tsup",
-    "prepublishOnly": "npm run build && npm run bundle",
+    "prepublishOnly": "npm run test && npm run build && npm run bundle",
     "generate:exports": "npx tsx ./scripts/generate-exports.ts",
     "test": "bun ./bin/test.ts",
     "test:dev": "bun tsx watch ./bin/test.ts"
