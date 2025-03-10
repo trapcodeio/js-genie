@@ -24,13 +24,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {},
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*"
-      ]
-    }
-  },
+  "sideEffects": false,
   "exports": {
     "./array/manipulate": {
       "types": "./dist/array/manipulate.d.ts",
@@ -47,10 +41,25 @@
       "import": "./dist/errors/lazy-try-catch.js",
       "require": "./dist/errors/lazy-try-catch.cjs"
     },
+    "./number/human": {
+      "types": "./dist/number/human.d.ts",
+      "import": "./dist/number/human.js",
+      "require": "./dist/number/human.cjs"
+    },
+    "./number/rand": {
+      "types": "./dist/number/rand.d.ts",
+      "import": "./dist/number/rand.js",
+      "require": "./dist/number/rand.cjs"
+    },
     "./string/limit": {
       "types": "./dist/string/limit.d.ts",
       "import": "./dist/string/limit.js",
       "require": "./dist/string/limit.cjs"
+    },
+    "./string/stats": {
+      "types": "./dist/string/stats.d.ts",
+      "import": "./dist/string/stats.js",
+      "require": "./dist/string/stats.cjs"
     },
     "./utils/functions": {
       "types": "./dist/utils/functions.d.ts",
