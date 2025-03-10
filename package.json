@@ -12,9 +12,13 @@
     "build": "rm -rf ./dist && npx tsc",
     "bundle": "npx tsup",
     "prepublishOnly": "npm run build && npm run bundle",
-    "generate:exports": "node --loader=ts-node/esm ./scripts/generate-exports.ts"
+    "generate:exports": "node --loader=ts-node/esm ./scripts/generate-exports.ts",
+    "test": "bun ./bin/test.ts"
   },
   "devDependencies": {
+    "@japa/assert": "^4.0.1",
+    "@japa/expect-type": "^2.0.3",
+    "@japa/runner": "^4.2.0",
     "@types/node": "22.13.5",
     "nodemon": "^3.1.9",
     "prettier": "^3.5.2",
@@ -23,7 +27,6 @@
     "tsx": "^4.19.3",
     "typescript": "^5.7.3"
   },
-  "dependencies": {},
   "sideEffects": false,
   "exports": {
     "./array/manipulate": {
