@@ -29,6 +29,13 @@
     "typescript": "^5.7.3"
   },
   "sideEffects": false,
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*"
+      ]
+    }
+  },
   "exports": {
     "./array/manipulate": {
       "types": "./dist/array/manipulate.d.ts",
