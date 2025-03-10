@@ -4,9 +4,7 @@
  * @param decimals
  * @example
  * intToFileSize(1024) // 1 KB
- * intToFileSize(1024, 0) // 1 KB
- * intToFileSize(1024, 1) // 1.0 KB
- * intToFileSize(1024, 2) // 1.00 KB
+ * intToFileSize(1000000) // 976 KB
  */
 export function intToFileSize(size: number, decimals = 2) {
     const bytes = size;
