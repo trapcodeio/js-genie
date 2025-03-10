@@ -9,7 +9,13 @@ export default As<string[]>([
     "./array/manipulate.ts",
     "./crypto/hash.ts",
     "./errors/lazy-try-catch.ts",
+
+    "./number/human.ts",
+    "./number/rand.ts",
+
     "./string/limit.ts",
+    "./string/stats.ts",
+
     "./utils/functions.ts",
     "./utils/typescript.ts"
 ]);
