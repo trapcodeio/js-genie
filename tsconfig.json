@@ -14,6 +14,9 @@
     "resolveJsonModule": true,
     "types": [
       "@types/node",
+      "@japa/runner",
+      "@japa/assert",
+      "@japa/expect-type"
     ],
   },
   "exclude": [

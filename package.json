@@ -12,8 +12,9 @@
     "build": "rm -rf ./dist && npx tsc",
     "bundle": "npx tsup",
     "prepublishOnly": "npm run build && npm run bundle",
-    "generate:exports": "node --loader=ts-node/esm ./scripts/generate-exports.ts",
-    "test": "bun ./bin/test.ts"
+    "generate:exports": "npx tsx ./scripts/generate-exports.ts",
+    "test": "bun ./bin/test.ts",
+    "test:dev": "bun tsx watch ./bin/test.ts"
   },
   "devDependencies": {
     "@japa/assert": "^4.0.1",
